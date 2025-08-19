@@ -450,10 +450,17 @@ button{
 }
 
 .team-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     text-align: center;
+    color: #2e2f42;
 }
 
 .team-prof {
+    font-weight: 400;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 8px;
 }
@@ -567,7 +574,6 @@ button{
     color: #434455;
 }
 
-
 @media screen and (min-width: 768px){
 .portfolio {
     padding: 96px 0;
@@ -579,7 +585,6 @@ button{
     gap: 72px 24px;
 }
 }
-
 
 @media screen and (min-width: 1158px){
 .portfolio {
@@ -630,26 +635,24 @@ button{
 
 /** footer  */
 .page-footer {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     background-color: #2e2f42;
     padding: 96px 0;
 }
 
-.container-footer {
+.page-footer>.container{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 0 auto;
-    gap: 72px;
-  }
-
-  .logo-common{
+    row-gap: 72px;
+}
+.logo-common{
     width: 288px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
 .footer-logo .part-logo {
     color: #f4f4fd;
@@ -665,7 +668,6 @@ button{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    max-width: 288px;
 }
 
 .social-list {
@@ -687,8 +689,6 @@ button{
 }
 
 .social-link-icon {
-    width: 24px;
-    height: 24px;
     fill: white;
 }
 
@@ -699,7 +699,8 @@ width: 100%;
 .subscribe-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* gap: 16px; */
+    row-gap: 16px;
 }
 
 .subsc-input {
@@ -715,6 +716,8 @@ width: 100%;
     line-height: 2;
     letter-spacing: 0.04em;
     color: #ffffff;
+
+    width: 100%;
 }
 
 .subsc-input::placeholder {
@@ -752,17 +755,19 @@ width: 100%;
     margin-left: 16px;
 }
 
-
 @media screen and (min-width: 768px){
-.container-footer {
-    gap: 72px 24px;
+.page-footer>.container{
     padding-left: 108px;
+    padding-right: 108px;
+    gap: 72px 24px;
+    align-items: baseline;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
 .footer-logo {
     margin-bottom: 16px;
-   width: 264px;
+    width: 264px;
 }
 
 .subscribe-form {
@@ -775,8 +780,8 @@ width: 100%;
     text-align: left;
 }
 
- .logo-common {
-     width: 264px;
+.logo-common {
+    width: 264px;
 }
 
 .subscribe {
@@ -789,21 +794,13 @@ width: 100%;
 }
 
 @media screen and (min-width: 1158px){
-.container {
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.page-footer {
+.page-footer>.container {
     background-color: #2e2f42;
-    padding: 100px 0;
-}
-
-.container-footer {
-    display: flex;
+    padding: 100px 15px;
     align-items: baseline;
     gap: 0;
-    }
+    margin: 0;
+}
 
 .footer-logo {
     display: inline-block;
@@ -825,8 +822,6 @@ width: 100%;
     flex-direction: column;
     width: 453px;
 }
-
-
 
 .subsc-btn:hover,
 .subsc-btn:focus {
@@ -921,7 +916,7 @@ margin-bottom: 48px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
-
+    font-style: normal;
 }
 
 .mobile-contacts-link.current {
@@ -983,7 +978,7 @@ margin-bottom: 48px;
 }
 
 .modal{
-    padding: 72px 16px;
+    padding: 24px 16px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1184,12 +1179,12 @@ margin-bottom: 48px;
 }
 
 @media screen and (min-width: 1158px){
-    .close-modal-btn:hover,
-    .close-modal-btn:focus {
-        background-color: #404bbf;
-        border: none;
-        stroke: #fff;
-        fill: white;
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    stroke: #fff;
+    fill: white;
 }
 
 .modal-btn:hover .modal-btn-icon,
